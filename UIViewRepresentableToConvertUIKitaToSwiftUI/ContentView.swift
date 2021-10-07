@@ -20,7 +20,8 @@ struct ContentView: View {
             
             UIViewTextField()
                 .frame(height: 55)
-                .background(Color.gray)
+                .background(Color.gray).cornerRadius(15)
+                .padding()
         }
     }
 }
@@ -36,7 +37,7 @@ struct UIViewTextField: UIViewRepresentable {
     func makeUIView(context: Context) -> some UIView {
         let textField = UITextField(frame: .zero)
         
-        let placeHolder = NSAttributedString(string: "Type here...", attributes: [.foregroundColor: UIColor.red])
+        let placeHolder = NSAttributedString(string: "Type here...", attributes: [.foregroundColor: UIColor.white])
         textField.attributedPlaceholder = placeHolder
         return textField
     }
